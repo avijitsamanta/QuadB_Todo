@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { toggleTodo, deleteTodo, editTodo } from "../redux/todoSlice";
 import { ListGroup, Button, Form, InputGroup, Modal, Container, Row, Col } from "react-bootstrap";
-import { FiStar } from "react-icons/fi";
 
 const TaskItem = ({ todo }) => {
   const dispatch = useDispatch();
@@ -31,7 +30,6 @@ const TaskItem = ({ todo }) => {
           style={{ borderColor: "#000" }}
         />
         <div>
-          <FiStar className={todo.important ? "text-warning" : "text-muted"} style={{ cursor: "pointer", marginRight: "10px" }} />
           <Button variant="warning" size="sm" onClick={() => setShowModal(true)} className="me-2">
             Edit
           </Button>

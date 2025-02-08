@@ -16,8 +16,6 @@ Users can **add, edit, delete, complete tasks**, and toggle **dark/light mode**.
 - React.js (Functional Components, Hooks)
 - Redux Toolkit (State Management)
 - Bootstrap (Styling)
-- React-Icons (Icons)
-- Recharts (Task Chart)
 
 ## 📦 Installation
 Clone this repository:
