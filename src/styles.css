@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+  }
+  .list-group-item-success {
+    background-color: #d4edda !important;
+    color: #155724 !important;
+}
+  
+  
