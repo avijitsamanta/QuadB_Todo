@@ -22,7 +22,7 @@ Users can **add, edit, delete, complete tasks**, and toggle **dark/light mode**.
 ## 📦 Installation
 Clone this repository:
 ```sh
-git clone https://github.com/yourusername/react-todo-app.git
+git clone https://github.com/avijitsamanta/QuadB_Todo.git
 cd react-todo-app
 npm install
 npm start
