@@ -16,28 +16,33 @@ const TaskItem = ({ todo }) => {
 
   return (
     <>
-      
-      <ListGroup.Item className={`d-flex align-items-center justify-content-between ${todo.completed ? "list-group-item-success" : ""}`} style={{ backgroundColor: "var(--bs-body-bg)", color: "var(--bs-body-color)", padding: "15px", borderRadius: "8px" }}>
-        <Form.Check
-          type="checkbox"
-          checked={todo.completed}
-          onChange={() => dispatch(toggleTodo(todo.id))}
-          label={
-            <span style={{ textDecoration: todo.completed ? "line-through" : "none", cursor: "pointer", fontSize: "16px" }}>
-              {todo.text}
-            </span>
-          }
-          style={{ borderColor: "#000" }}
-        />
-        <div>
-          <Button variant="warning" size="sm" onClick={() => setShowModal(true)} className="me-2">
-            Edit
-          </Button>
-          <Button variant="danger" size="sm" onClick={() => dispatch(deleteTodo(todo.id))}>
-            Delete
-          </Button>
-        </div>
-      </ListGroup.Item>
+      <Container className="mt-3">
+        <Row>
+          <Col md={{ span: 8, offset: 2 }}>
+            <ListGroup.Item className={`d-flex align-items-center justify-content-between ${todo.completed ? "list-group-item-success" : ""}`} style={{ backgroundColor: "var(--bs-body-bg)", color: "var(--bs-body-color)", padding: "15px", borderRadius: "8px" }}>
+              <Form.Check
+                type="checkbox"
+                checked={todo.completed}
+                onChange={() => dispatch(toggleTodo(todo.id))}
+                label={
+                  <span style={{ textDecoration: todo.completed ? "line-through" : "none", cursor: "pointer", fontSize: "16px" }}>
+                    {todo.text}
+                  </span>
+                }
+                style={{ borderColor: "#000" }}
+              />
+              <div>
+                <Button variant="warning" size="sm" onClick={() => setShowModal(true)} className="me-2">
+                  Edit
+                </Button>
+                <Button variant="danger" size="sm" onClick={() => dispatch(deleteTodo(todo.id))}>
+                  Delete
+                </Button>
+              </div>
+            </ListGroup.Item>
+          </Col>
+        </Row>
+      </Container>
 
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
